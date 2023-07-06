@@ -22,7 +22,7 @@ namespace Webapplication2.Database
             modelBuilder.Entity<Todoo>().HasData(new Todoo
             {
                 Id = 1,
-                Title = "Apatath Dawasaka Ira Payado - DB",
+                Title = "Apatath Dawasaka Ira Payado",
                 Description = "ME kathawen kiyawenne siriyawathi gana",
                 Created = DateTime.Now,
                 Due = DateTime.Now.AddDays(7),
