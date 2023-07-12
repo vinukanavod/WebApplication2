@@ -9,7 +9,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddScoped<ITodooRepo, AddService >() ;//dependancy innjection
+builder.Services.AddScoped<ITodooRepo, TodooServerSQLservice >() ;//dependancy innjection
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

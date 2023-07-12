@@ -10,5 +10,6 @@ namespace WebApplication2.Services
   public interface ITodooRepo
     {
         public List<Todoo> GetAllTodoos();
+        public List<Todoomommy> GetAllTodoomommies();
     }
 }

@@ -33,7 +33,25 @@ namespace WebApplication2.Controllers
             return Ok(x);
         }
 
-       
+
+
+        [HttpGet] //("{id}")
+        public IActionResult GetTodoomommy(int? id)
+        {
+            // var x = GetAllTodoos().Where(t => t.Id ==id);
+
+
+            var x = _addService.GetAllTodoomommies();
+            if (id == null)
+            {
+                return Ok(x);
+            }
+            x = x.Where(t => t.Id == id).ToList();
+
+            return Ok(x);
+        }
+
+
     }
 
   

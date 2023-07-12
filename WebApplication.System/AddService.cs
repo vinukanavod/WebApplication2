@@ -4,6 +4,12 @@ namespace WebApplication2.Services
 {
     public class AddService : ITodooRepo  //methanadi interface eka inherite karapu eka thamai kare
     {
+        public List<Todoomommy> GetAllTodoomommies()
+        {
+            var list  = new List<Todoomommy>();
+            return list;
+        }
+
         public List<Todoo> GetAllTodoos()
         {
             var TodooList = new List<Todoo>();

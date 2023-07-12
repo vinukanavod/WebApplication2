@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Webapplication2.Database\Webapplication2.Database.csproj" />
     <ProjectReference Include="..\WebApplication2.Models\WebApplication2.Models.csproj" />
   </ItemGroup>
 

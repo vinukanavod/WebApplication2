@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Webapplication2.Database;
 
@@ -11,9 +12,10 @@ using Webapplication2.Database;
 namespace Webapplication2.Database.Migrations
 {
     [DbContext(typeof(TodoDbContext))]
-    partial class TodoDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230711174300_AddNewTable")]
+    partial class AddNewTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -58,45 +60,12 @@ namespace Webapplication2.Database.Migrations
                         new
                         {
                             Id = 1,
-                            Animal = 0,
-                            Created = new DateTime(2023, 7, 12, 11, 40, 26, 259, DateTimeKind.Local).AddTicks(2900),
-                            Description = " siriyawathi gana",
-                            Due = new DateTime(2023, 7, 17, 11, 40, 26, 259, DateTimeKind.Local).AddTicks(2912),
+                            Animal = 2,
+                            Created = new DateTime(2023, 7, 11, 23, 13, 0, 147, DateTimeKind.Local).AddTicks(504),
+                            Description = "ME kathawen kiyawenne siriyawathi gana",
+                            Due = new DateTime(2023, 7, 18, 23, 13, 0, 147, DateTimeKind.Local).AddTicks(513),
                             Status = 2,
-                            Title = "Apatath Dawasaka Ira Payado hichchi putheeee. "
-                        });
-                });
-
-            modelBuilder.Entity("WebApplication2.Models.Todoomommy", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("number")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Todoomommies");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 3,
-                            Description = "Hello Machan KOhomada IThin.",
-                            Name = "Vinuka Nvod",
-                            number = 714703776
+                            Title = "Apatath Dawasaka Ira Payado ---database"
                         });
                 });
 #pragma warning restore 612, 618
