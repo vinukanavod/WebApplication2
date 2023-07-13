@@ -11,6 +11,10 @@
         public TodooStatus Status { get; set; }//Top,Middle,High
 
         public apple Animal { get; set; }//apple,ball,cat
+
+        public int  AuthorId { get; set; }
+
+        public Author Author { get; set; }
     }
             
     public  enum apple

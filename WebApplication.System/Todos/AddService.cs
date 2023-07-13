@@ -1,12 +1,12 @@
 ﻿using WebApplication2.Models;
 
-namespace WebApplication2.Services
+namespace WebApplication2.Services.Todos
 {
-    public class AddService : ITodooRepo  //methanadi interface eka inherite karapu eka thamai kare
+    public class AddService// : ITodooRepo  //methanadi interface eka inherite karapu eka thamai kare
     {
         public List<Todoomommy> GetAllTodoomommies()
         {
-            var list  = new List<Todoomommy>();
+            var list = new List<Todoomommy>();
             return list;
         }
 
@@ -53,5 +53,7 @@ namespace WebApplication2.Services
 
             return TodooList;
         }
+
+      
     }
 }

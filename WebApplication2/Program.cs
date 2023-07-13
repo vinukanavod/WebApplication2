@@ -1,4 +1,5 @@
-using WebApplication2.Services;
+using WebApplication2.Services.Authors;
+using WebApplication2.Services.Todos;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,7 +10,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddScoped<ITodooRepo, TodooServerSQLservice >() ;//dependancy innjection
+builder.Services.AddScoped<ITodooRepo, TodooServerSQLservice >();//dependancy innjection
+builder.Services.AddScoped<AuthorRepo, AuthorSQLserverService >();//mekath dependancyyak
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
