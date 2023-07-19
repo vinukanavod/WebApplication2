@@ -1,12 +1,20 @@
-﻿namespace WebApplication2.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace WebApplication2.Models
 {
     public class Todoo
     {
         public int Id { get; set; }
+        [Required]
+        [MaxLength(150)]
         public string Title { get; set; }
+        [MaxLength(300)]
         public string Description { get; set; }
+        [Required]
         public DateTime Created { get; set; }
+        [Required]
         public DateTime Due { get; set; }
+        [Required]
 
         public TodooStatus Status { get; set; }//Top,Middle,High
 

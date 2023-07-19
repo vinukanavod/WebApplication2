@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Webapplication2.Database;
 
@@ -11,9 +12,10 @@ using Webapplication2.Database;
 namespace Webapplication2.Database.Migrations
 {
     [DbContext(typeof(TodoDbContext))]
-    partial class TodoDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230714054431_Authorupdate")]
+    partial class Authorupdate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -30,30 +32,13 @@ namespace Webapplication2.Database.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<string>("AdderssNo")
-                        .IsRequired()
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
-
-                    b.Property<string>("City")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
                     b.Property<string>("FirstName")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LastName")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<string>("Street")
-                        .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -63,47 +48,32 @@ namespace Webapplication2.Database.Migrations
                         new
                         {
                             Id = 1,
-                            AdderssNo = "45",
-                            City = "Colombo 1",
                             FirstName = "vinuka",
-                            LastName = "navod",
-                            Street = "Street 5"
+                            LastName = "navod"
                         },
                         new
                         {
                             Id = 2,
-                            AdderssNo = "25",
-                            City = "Colombo 2",
                             FirstName = "kavindu",
-                            LastName = "hasintha",
-                            Street = "Street 15"
+                            LastName = "hasintha"
                         },
                         new
                         {
                             Id = 3,
-                            AdderssNo = "35",
-                            City = "Colombo 3",
                             FirstName = "pravindu",
-                            LastName = "bhashitha",
-                            Street = "Street 13"
+                            LastName = "bhashitha"
                         },
                         new
                         {
                             Id = 4,
-                            AdderssNo = "55",
-                            City = "Colombo 4",
                             FirstName = "Nethmi",
-                            LastName = "anjani",
-                            Street = "Street 122"
+                            LastName = "anjani"
                         },
                         new
                         {
                             Id = 5,
-                            AdderssNo = "75",
-                            City = "Colombo 008",
                             FirstName = "Nethmi",
-                            LastName = "Nishara",
-                            Street = "Street 19"
+                            LastName = "Nishara"
                         });
                 });
 
@@ -126,8 +96,7 @@ namespace Webapplication2.Database.Migrations
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasMaxLength(300)
-                        .HasColumnType("nvarchar(300)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("Due")
                         .HasColumnType("datetime2");
@@ -137,8 +106,7 @@ namespace Webapplication2.Database.Migrations
 
                     b.Property<string>("Title")
                         .IsRequired()
-                        .HasMaxLength(150)
-                        .HasColumnType("nvarchar(150)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -152,9 +120,9 @@ namespace Webapplication2.Database.Migrations
                             Id = 1,
                             Animal = 0,
                             AuthorId = 1,
-                            Created = new DateTime(2023, 7, 14, 11, 22, 58, 423, DateTimeKind.Local).AddTicks(1497),
+                            Created = new DateTime(2023, 7, 14, 11, 14, 30, 896, DateTimeKind.Local).AddTicks(2466),
                             Description = " A",
-                            Due = new DateTime(2023, 7, 19, 11, 22, 58, 423, DateTimeKind.Local).AddTicks(1506),
+                            Due = new DateTime(2023, 7, 19, 11, 14, 30, 896, DateTimeKind.Local).AddTicks(2480),
                             Status = 2,
                             Title = "row 1 "
                         },
@@ -163,9 +131,9 @@ namespace Webapplication2.Database.Migrations
                             Id = 2,
                             Animal = 0,
                             AuthorId = 2,
-                            Created = new DateTime(2023, 7, 14, 11, 22, 58, 423, DateTimeKind.Local).AddTicks(1511),
+                            Created = new DateTime(2023, 7, 14, 11, 14, 30, 896, DateTimeKind.Local).AddTicks(2485),
                             Description = " B",
-                            Due = new DateTime(2023, 7, 20, 11, 22, 58, 423, DateTimeKind.Local).AddTicks(1512),
+                            Due = new DateTime(2023, 7, 20, 11, 14, 30, 896, DateTimeKind.Local).AddTicks(2486),
                             Status = 1,
                             Title = "row 2"
                         },
@@ -174,9 +142,9 @@ namespace Webapplication2.Database.Migrations
                             Id = 3,
                             Animal = 0,
                             AuthorId = 3,
-                            Created = new DateTime(2023, 7, 14, 11, 22, 58, 423, DateTimeKind.Local).AddTicks(1513),
+                            Created = new DateTime(2023, 7, 14, 11, 14, 30, 896, DateTimeKind.Local).AddTicks(2487),
                             Description = "C",
-                            Due = new DateTime(2023, 7, 21, 11, 22, 58, 423, DateTimeKind.Local).AddTicks(1514),
+                            Due = new DateTime(2023, 7, 21, 11, 14, 30, 896, DateTimeKind.Local).AddTicks(2487),
                             Status = 2,
                             Title = "row 3 "
                         });
@@ -218,17 +186,12 @@ namespace Webapplication2.Database.Migrations
             modelBuilder.Entity("WebApplication2.Models.Todoo", b =>
                 {
                     b.HasOne("WebApplication2.Models.Author", "Author")
-                        .WithMany("Todos")
+                        .WithMany()
                         .HasForeignKey("AuthorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Author");
-                });
-
-            modelBuilder.Entity("WebApplication2.Models.Author", b =>
-                {
-                    b.Navigation("Todos");
                 });
 #pragma warning restore 612, 618
         }

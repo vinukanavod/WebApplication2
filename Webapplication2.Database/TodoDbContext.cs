@@ -65,11 +65,11 @@ namespace Webapplication2.Database
                 );
             modelBuilder.Entity<Author>().HasData(new Author[]
             {
-                new Author {Id=1,FirstName="vinuka",LastName="navod"},
-               new Author { Id= 2,FirstName="kavindu",LastName="hasintha"},
-               new Author { Id=3,FirstName="pravindu",LastName="bhashitha"},
-               new Author { Id=4,FirstName="Nethmi", LastName="anjani"},
-               new Author { Id=5,FirstName="Nethmi" , LastName="Nishara"}
+                new Author {Id=1,FirstName="vinuka",LastName="navod",AdderssNo="45" ,Street="Street 5",City="Colombo 1"             },
+               new Author { Id= 2,FirstName="kavindu",LastName="hasintha",AdderssNo="25" ,Street="Street 15",City="Colombo 2"   },
+               new Author { Id=3,FirstName="pravindu",LastName="bhashitha",AdderssNo="35" ,Street="Street 13",City="Colombo 3"   },
+               new Author { Id=4,FirstName="Nethmi", LastName="anjani",AdderssNo="55" ,Street="Street 122",City="Colombo 4"   },
+               new Author { Id=5,FirstName="Nethmi" , LastName="Nishara",AdderssNo="75" ,Street="Street 19",City="Colombo 008"   }
             }
                 );
         }
