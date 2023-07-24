@@ -9,9 +9,9 @@ namespace WebApplication2.Services.Todos
 {
     public interface ITodooRepo
     {
-        public List<Todoo> GetAllTodoos();
+        public List<Todoo> GetAllTodoos(int authorid);
         public List<Todoomommy> GetAllTodoomommies();
 
-        public Todoo GetTodoo(int id);
+        public Todoo GetTodoo(int authorid,int id);
     }
 }

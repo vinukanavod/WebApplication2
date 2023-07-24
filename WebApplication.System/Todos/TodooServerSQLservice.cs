@@ -17,14 +17,14 @@ namespace WebApplication2.Services.Todos
            return _context.Todoomommies.ToList();
        }
 
-        public List<Todoo> GetAllTodoos()
+        public List<Todoo> GetAllTodoos(int authorid)
         {
-            return _context.Todos.ToList();
+            return _context.Todos.Where(t => t.AuthorId == authorid).ToList();
         }
 
-        public Todoo GetTodoo(int id)
+        public Todoo GetTodoo( int authorid,int id)
         {
-            return _context.Todos.Find(id);
+            return _context.Todos.FirstOrDefault(t => t.Id== id && t.AuthorId== authorid);
         }
     }
 }
